@@ -1,1 +1,1 @@
-/Users/yeomhongseon/Desktop/Data/KE_Dataset/Experiment_Dataset/SemEval2010/test/
+/Users/yeomhongseon/K-CGRank/Data/
