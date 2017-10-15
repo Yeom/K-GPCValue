@@ -3,33 +3,39 @@
 
 ㄱ) 문서 단위 키워드 추출 방법
 
-<Execute Command example>
-python Keyphrase_Class.py --data filepath.txt --key 10 --window 5
+	<Execute Command example>
+		python Keyphrase_Class.py --data filepath.txt --key 10 --window 5
 
-key : 추출할 키워드의 수
-window : 앞뒤 몇단어의 정보를 함께 확인할 것인가(텍스트가 짧을수록 window 낮게하는 것을 추천)
+		key : 추출할 키워드의 수
+		window : 앞뒤 몇단어의 정보를 함께 확인할 것인가(텍스트가 짧을수록 window 낮게하는 것을 추천)
 
-<Input>
-1) Input data의 위치는 filepath.txt에 명시한다.
-2) Input data들은 Raw data(한글로만 이루어진 데이터)로 가정한다.
-2) 하나의 file은 한개 문서의 정보만 갖는다.
-ex)신문 문서 1000개 데이터 -> Document_1.txt ~ Document_1000.txt
+	<Input>
+		1) Input data의 위치는 filepath.txt에 명시한다.
+		2) Input data들은 Raw data(한글로만 이루어진 데이터)로 가정한다.
+		3) 하나의 file은 한개 문서의 정보만 갖는다.
+			ex)신문 문서 1000개 데이터 -> Document_1.txt ~ Document_1000.txt
 
-<Output>
-1)한 문서당 --key로 지정한 개수만큼 키워드를 추출한다.
-2)Result.txt에 기록된다.(Keyphrase_Class의 File관련 class함수 참조)
+	<Output>
+		1)한 문서당 --key로 지정한 개수만큼 키워드를 추출한다.
+		2)Result.txt에 기록된다.(Keyphrase_Class의 File관련 class함수 참조)
 
-ㄴ)문장 단위 모듈을 이용한 키워드 추출 방법
+ㄴ)문장 단위 모듈을 이용한 키워드 추출 방법(test.py 참조)
+	<Call>
+	```
+	import Keyphrase_Class as KC
+	_module_ = KC.Keyphrase()
+	result = KC.module(_module_, '입력문장', window, key)
+	```
 
+	<Module parameter>
+	입력문장 : Input sentence
+	window   : window size
+	key      : 추출할 keyword 수
 
+ㄷ)그 외
+	<사용된 형태소 분석기>
+		Komoran
 
-
-
-
-
-<사용된 형태소 분석기>
-Komoran
-
-<ERROR Issue>
-1)If Komoran import gets error
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+	<ERROR Issue>
+		1)If Komoran import gets error
+			export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
