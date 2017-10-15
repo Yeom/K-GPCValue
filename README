@@ -1,7 +1,7 @@
 @Author : 염홍선
 @Contact : yeomjohn@gmail.com
 
-ㄱ) 문서 단위 키워드 추출 방법
+ㄱ) 문서 단위 키워드 추출 방법(파일, 디렉토리 속 문서들을 입력으로 키워드 추출)
 
 	<Execute Command example>
 		python Keyphrase_Class.py --data filepath.txt --key 10 --window 5
@@ -19,7 +19,7 @@
 		1)한 문서당 --key로 지정한 개수만큼 키워드를 추출한다.
 		2)Result.txt에 기록된다.(Keyphrase_Class의 File관련 class함수 참조)
 
-ㄴ)문장 단위 모듈을 이용한 키워드 추출 방법(test.py 참조)
+ㄴ)문장 단위 모듈을 이용한 키워드 추출 방법(다른 코드에서 import해서 문장 단위 입력에서 키워드를 추출,test.py 참조)
 	<Call>
 	```
 	import Keyphrase_Class as KC
